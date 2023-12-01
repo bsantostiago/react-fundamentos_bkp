@@ -33,6 +33,7 @@ const StyledConteudo = styled.main`
 `;
 
 function Conteudo() {
+  /* Exercício */
   const responsaveis = ["Neil Peart", "Alex Lifeson", "Geddy Lee"];
 
   return (
