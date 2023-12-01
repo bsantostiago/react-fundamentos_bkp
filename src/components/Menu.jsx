@@ -12,12 +12,12 @@ const StyledMenu = styled.nav`
     width: 30%;
     height: 30px;
     transition: transform 100ms;
-  }
 
-  a:hover {
-    background-color: aqua;
-    color: black;
-    transform: scale(1.05);
+    &:hover {
+      background-color: aqua;
+      color: black;
+      transform: scale(1.05);
+    }
   }
 `;
 
