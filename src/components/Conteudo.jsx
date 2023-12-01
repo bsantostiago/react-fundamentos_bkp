@@ -13,6 +13,22 @@ const StyledConteudo = styled.main`
     border-bottom: outset 1px;
     margin-bottom: 0.5rem;
   }
+
+  p {
+    line-height: 2;
+  }
+
+  @media screen and (min-width: 650px) {
+    .artigos {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .artigos article {
+      margin: 0;
+      width: 32%;
+    }
+  }
 `;
 
 function Conteudo() {
@@ -27,9 +43,11 @@ function Conteudo() {
         expedita aspernatur.
       </p>
 
-      <Artigo />
-      <Artigo />
-      <Artigo />
+      <div className="artigos">
+        <Artigo />
+        <Artigo />
+        <Artigo />
+      </div>
     </StyledConteudo>
   );
 }
