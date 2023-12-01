@@ -7,7 +7,7 @@ function App() {
     <>
       <Cabecalho />
       <Conteudo />
-      <Rodape />
+      <Rodape cor="orange" />
     </>
   );
 }
