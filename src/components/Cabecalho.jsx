@@ -1,5 +1,10 @@
 import Menu from "./Menu";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const efeito = keyframes`
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+`;
 
 const StyledCabecalho = styled.header`
   width: 100%;
@@ -15,6 +20,13 @@ const StyledCabecalho = styled.header`
     background-color: pink;
     width: 50%;
     margin: 8px auto;
+  }
+
+  h1 {
+    animation-name: ${efeito};
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
   }
 `;
 
