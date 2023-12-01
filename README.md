@@ -10,6 +10,7 @@ As props são criadas manualmente, embora também exista a prop 'children' que p
 - Outras props
 - Desestruturação
 - Props pra imagem (talvez) - ajuste index.css
+
 - Exercicios (Conteudo e Artigo)
   1. Crie um array com o nome de 3 cursos
   2. Dentro das chamadas dos artigos, passe uma nova prop chamada curso.

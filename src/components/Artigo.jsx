@@ -16,7 +16,25 @@ const StyledArtigo = styled.article`
   }
 `;
 
-function Artigo(props) {
+function Artigo({ titulo, icone, children, responsavel }) {
+  return (
+    <StyledArtigo>
+      <h3>
+        {titulo} {icone}
+      </h3>
+      {children}
+
+      <footer>
+        <p>
+          <small>
+            <i>Responsável: {responsavel}</i>
+          </small>
+        </p>
+      </footer>
+    </StyledArtigo>
+  );
+}
+/* function Artigo(props) {
   return (
     <StyledArtigo>
       <h3>
@@ -34,5 +52,5 @@ function Artigo(props) {
     </StyledArtigo>
   );
 }
-
+ */
 export default Artigo;
