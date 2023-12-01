@@ -2,6 +2,15 @@
 
 ## 05-styled-components
 
+- npm install styled-components
+- import styled from "styled-components"
+- Styled[Componentes]
+- extensão vscode-styled
+- talvez:
+  - styled global
+  - arquivo/módulo com componentes styled
+  - import dos componentes
+
 ---
 
 ## Resumo/Revisão
