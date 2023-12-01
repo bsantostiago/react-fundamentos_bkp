@@ -20,3 +20,12 @@ export const StyledMenu = styled.nav`
     }
   }
 `;
+
+export const StyledRodape = styled.footer`
+  background-image: linear-gradient(black, purple);
+  color: white;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;

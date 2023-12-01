@@ -12,7 +12,10 @@ const StyledArtigo = styled.article`
 
   h3 {
     color: purple;
+    border-bottom: 1px solid;
   }
+
+  p { font-size: 1.1rem}
 `;
 
 function Artigo() {
