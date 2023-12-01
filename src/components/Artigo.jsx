@@ -12,6 +12,7 @@ const StyledArtigo = styled.article`
 
   h3 {
     color: purple;
+    text-align: center;
   }
 `;
 
@@ -21,6 +22,7 @@ function Artigo(props) {
       <h3>
         {props.titulo} {props.icone}
       </h3>
+      {props.children}
     </StyledArtigo>
   );
 }

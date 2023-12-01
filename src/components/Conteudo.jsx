@@ -15,13 +15,14 @@ const StyledConteudo = styled.main`
   }
 
   p {
-    line-height: 2;
+    line-height: 1;
   }
 
   @media screen and (min-width: 650px) {
     .artigos {
       display: flex;
       justify-content: space-between;
+      margin-top: 0.5rem;
     }
 
     .artigos article {
@@ -44,9 +45,30 @@ function Conteudo() {
       </p>
 
       <div className="artigos">
-        <Artigo titulo="Front-End" icone="💻" />
-        <Artigo titulo="Back-End" icone="🔐" />
-        <Artigo titulo="Mobile" icone="📱" />
+        <Artigo titulo="Front-End" icone="💻">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+            omnis!
+          </p>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </Artigo>
+        <Artigo titulo="Back-End" icone="🔐">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Consequatur possimus reprehenderit iure error debitis hic eos amet
+            aspernatur nostrum odio maxime, quo delectus suscipit corrupti
+            dolore exercitationem iusto quis laudantium!
+          </p>
+        </Artigo>
+        <Artigo titulo="Mobile" icone="📱">
+          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Lorem, ipsum dolor.</p>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </Artigo>
       </div>
     </StyledConteudo>
   );
