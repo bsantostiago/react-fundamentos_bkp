@@ -12,7 +12,7 @@ const StyledCabecalho = styled.header`
   hr {
     border: none;
     height: 4px;
-    background-color: aqua;
+    background-color: pink;
     width: 50%;
     margin: 8px auto;
   }

@@ -14,7 +14,7 @@ const StyledMenu = styled.nav`
     transition: transform 100ms;
 
     &:hover {
-      background-color: aqua;
+      background-color: pink;
       color: black;
       transform: scale(1.05);
     }
