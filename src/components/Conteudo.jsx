@@ -44,9 +44,9 @@ function Conteudo() {
       </p>
 
       <div className="artigos">
-        <Artigo />
-        <Artigo />
-        <Artigo />
+        <Artigo titulo="Front-End" icone="💻" />
+        <Artigo titulo="Back-End" icone="🔐" />
+        <Artigo titulo="Mobile" icone="📱" />
       </div>
     </StyledConteudo>
   );

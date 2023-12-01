@@ -15,14 +15,13 @@ const StyledArtigo = styled.article`
   }
 `;
 
-function Artigo() {
+function Artigo(props) {
   return (
-    <>
-      <StyledArtigo>
-        <h3>Artigo 1</h3>
-        <p>Conteúdo do artigo 1....</p>
-      </StyledArtigo>
-    </>
+    <StyledArtigo>
+      <h3>
+        {props.titulo} {props.icone}
+      </h3>
+    </StyledArtigo>
   );
 }
 
