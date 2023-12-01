@@ -1,8 +1,23 @@
+import styled from "styled-components";
 import Artigo from "./Artigo";
+
+const StyledConteudo = styled.main`
+  width: 90vw;
+  margin: 1rem auto;
+  background-color: aliceblue;
+  padding: 1rem;
+  box-shadow: darkblue 0 0 1px inset;
+
+  hr {
+    border: none;
+    border-bottom: outset 1px;
+    margin-bottom: 0.5rem;
+  }
+`;
 
 function Conteudo() {
   return (
-    <main>
+    <StyledConteudo>
       <h2>Conteúdo da aplicação</h2>
       <hr />
       <p>
@@ -15,7 +30,7 @@ function Conteudo() {
       <Artigo />
       <Artigo />
       <Artigo />
-    </main>
+    </StyledConteudo>
   );
 }
 
