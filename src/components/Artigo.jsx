@@ -23,6 +23,14 @@ function Artigo(props) {
         {props.titulo} {props.icone}
       </h3>
       {props.children}
+
+      <footer>
+        <p>
+          <small>
+            <i>Responsável: {props.responsavel}</i>
+          </small>
+        </p>
+      </footer>
     </StyledArtigo>
   );
 }

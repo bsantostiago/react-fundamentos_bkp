@@ -33,6 +33,8 @@ const StyledConteudo = styled.main`
 `;
 
 function Conteudo() {
+  const responsaveis = ["Neil Peart", "Alex Lifeson", "Geddy Lee"];
+
   return (
     <StyledConteudo>
       <h2>Conteúdo da aplicação</h2>
@@ -45,7 +47,7 @@ function Conteudo() {
       </p>
 
       <div className="artigos">
-        <Artigo titulo="Front-End" icone="💻">
+        <Artigo titulo="Front-End" icone="💻" responsavel={responsaveis[0]}>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
             omnis!
@@ -56,7 +58,7 @@ function Conteudo() {
             <li>JavaScript</li>
           </ul>
         </Artigo>
-        <Artigo titulo="Back-End" icone="🔐">
+        <Artigo titulo="Back-End" icone="🔐" responsavel={responsaveis[1]}>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Consequatur possimus reprehenderit iure error debitis hic eos amet
@@ -64,7 +66,7 @@ function Conteudo() {
             dolore exercitationem iusto quis laudantium!
           </p>
         </Artigo>
-        <Artigo titulo="Mobile" icone="📱">
+        <Artigo titulo="Mobile" icone="📱" responsavel={responsaveis[2]}>
           <p>Lorem ipsum dolor sit amet.</p>
           <p>Lorem, ipsum dolor.</p>
           <p>Lorem ipsum dolor sit amet.</p>
