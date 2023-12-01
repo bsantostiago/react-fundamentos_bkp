@@ -16,21 +16,21 @@ const StyledArtigo = styled.article`
   }
 `;
 
-function Artigo({ titulo, icone, children, responsavel }) {
+function Artigo({ titulo, categoria, preco }) {
+  const formataPreco = (valor) => {
+    return valor.toLocaleString("pt-br", {
+      style: "currency",
+      currency: "BRL",
+    });
+  };
+  /* Talvez melhor não usar preço */
   return (
     <StyledArtigo>
-      <h3>
-        {titulo} {icone}
-      </h3>
-      {children}
-
-      <footer>
-        <p>
-          <small>
-            <i>Responsável: {responsavel}</i>
-          </small>
-        </p>
-      </footer>
+      <h3>Curso: {titulo}</h3>
+      <h4>Categoria: {categoria}</h4>
+      <p>
+        <b>Preço:</b> {formataPreco(preco || 0)}
+      </p>
     </StyledArtigo>
   );
 }

@@ -1,5 +1,12 @@
 # Fundamentos de React
 
+## 07-props-com-dados-dinamicos
+
+- Gerando os dados para props a partir de um array com objetos
+- Uso do map para geração dos artigos com as props
+
+---
+
 ## 06-props
 
 São parâmetros ou argumentos passados para os componentes React, normalmente usados para injeção de dados dinâmicos. As props funcionam como um objeto, e cada prop criada por você passa a ser uma propriedade deste objeto.
