@@ -63,18 +63,6 @@ function Conteudo() {
             ></Artigo>
           );
         })}
-
-        <Artigo titulo="Front-End" icone="💻" responsavel={responsaveis[0]}>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
-            omnis!
-          </p>
-          <ul>
-            <li>HTML5</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-          </ul>
-        </Artigo>
       </div>
     </StyledConteudo>
   );
