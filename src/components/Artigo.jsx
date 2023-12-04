@@ -32,19 +32,15 @@ const StyledArtigo = styled.article`
 
 function Artigo({ titulo, icone, children, responsavel, delay }) {
   return (
-    <StyledArtigo delay={`${delay}`}>
+    <StyledArtigo delay={delay}>
       <h3>
         {titulo} {icone}
       </h3>
       {children}
 
-      <footer>
-        <p>
-          <small>
-            <i>Responsável: {responsavel}</i>
-          </small>
-        </p>
-      </footer>
+      <p>
+        <i>Responsável: {responsavel}</i>
+      </p>
     </StyledArtigo>
   );
 }
