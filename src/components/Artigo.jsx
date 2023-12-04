@@ -4,6 +4,19 @@ const StyledArtigo = styled.article`
   background-color: lavender;
   padding: 1rem;
   margin: 0.5rem 0;
+  animation-name: surgir;
+  animation-duration: 300ms;
+  animation-fill-mode: backwards;
+  animation-delay: ${(props) => props.valorDelay || "100ms"};
+
+  @keyframes surgir {
+    from {
+      transform: scale(0.1);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
 
   h3,
   p {
@@ -16,9 +29,9 @@ const StyledArtigo = styled.article`
   }
 `;
 
-function Artigo({ titulo, icone, children, responsavel }) {
+function Artigo({ titulo, icone, children, responsavel, delay }) {
   return (
-    <StyledArtigo>
+    <StyledArtigo valorDelay={delay}>
       <h3>
         {titulo} {icone}
       </h3>
@@ -34,23 +47,5 @@ function Artigo({ titulo, icone, children, responsavel }) {
     </StyledArtigo>
   );
 }
-/* function Artigo(props) {
-  return (
-    <StyledArtigo>
-      <h3>
-        {props.titulo} {props.icone}
-      </h3>
-      {props.children}
 
-      <footer>
-        <p>
-          <small>
-            <i>Responsável: {props.responsavel}</i>
-          </small>
-        </p>
-      </footer>
-    </StyledArtigo>
-  );
-}
- */
 export default Artigo;
