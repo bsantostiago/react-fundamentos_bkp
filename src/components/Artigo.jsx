@@ -7,7 +7,8 @@ const StyledArtigo = styled.article`
   animation-name: surgir;
   animation-duration: 300ms;
   animation-fill-mode: backwards;
-  animation-delay: ${(props) => props.valorDelay || "100ms"};
+  /* Nem fazer isso na aula */
+  animation-delay: ${(props) => props.delay || "100ms"};
 
   @keyframes surgir {
     from {
@@ -31,7 +32,7 @@ const StyledArtigo = styled.article`
 
 function Artigo({ titulo, icone, children, responsavel, delay }) {
   return (
-    <StyledArtigo valorDelay={delay}>
+    <StyledArtigo delay={`${delay}`}>
       <h3>
         {titulo} {icone}
       </h3>
