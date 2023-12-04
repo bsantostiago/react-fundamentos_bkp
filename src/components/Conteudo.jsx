@@ -48,7 +48,12 @@ function Conteudo() {
       </p>
 
       <div className="artigos">
-        <Artigo titulo="Front-End" icone="💻" responsavel={responsaveis[0]}>
+        <Artigo
+          titulo="Front-End"
+          icone="💻"
+          responsavel={responsaveis[0]}
+          delay="100ms"
+        >
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
             omnis!
@@ -59,7 +64,12 @@ function Conteudo() {
             <li>JavaScript</li>
           </ul>
         </Artigo>
-        <Artigo titulo="Back-End" icone="🔐" responsavel={responsaveis[1]}>
+        <Artigo
+          titulo="Back-End"
+          icone="🔐"
+          responsavel={responsaveis[1]}
+          delay="200ms"
+        >
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Consequatur possimus reprehenderit iure error debitis hic eos amet
@@ -67,7 +77,12 @@ function Conteudo() {
             dolore exercitationem iusto quis laudantium!
           </p>
         </Artigo>
-        <Artigo titulo="Mobile" icone="📱" responsavel={responsaveis[2]}>
+        <Artigo
+          titulo="Mobile"
+          icone="📱"
+          responsavel={responsaveis[2]}
+          delay="300ms"
+        >
           <p>Lorem ipsum dolor sit amet.</p>
           <p>Lorem, ipsum dolor.</p>
           <p>Lorem ipsum dolor sit amet.</p>
