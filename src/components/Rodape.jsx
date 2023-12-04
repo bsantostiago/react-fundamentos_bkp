@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledRodape = styled.footer`
   background-image: linear-gradient(black, purple);
-  color: ${(props) => props.cor || "white"};
+  color: white;
   height: 20vh;
   display: flex;
   justify-content: center;
@@ -11,8 +11,8 @@ const StyledRodape = styled.footer`
 
 function Rodape(props) {
   return (
-    <StyledRodape {...props}>
-      <h2>Rodapé da aplicação - Cor usada: {props.cor}</h2>
+    <StyledRodape>
+      <h2>Rodapé da aplicação</h2>
     </StyledRodape>
   );
 }
