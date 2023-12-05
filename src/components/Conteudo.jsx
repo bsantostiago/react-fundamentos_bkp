@@ -43,6 +43,7 @@ const StyledConteudo = styled.main`
 
 function Conteudo() {
   const [filtrarAbaixoDe1000, setFiltrarAbaixoDe1000] = useState(false);
+  const [categoriaSelecionada, setCategoriaSelecionada] = useState(null);
 
   const exemplo2 = () => {
     // setFiltrarAbaixoDe1000((prev) => !prev);
@@ -55,9 +56,16 @@ function Conteudo() {
     setFiltrarAbaixoDe1000(!filtrarAbaixoDe1000);
   };
 
-  const cursosExibidos = filtrarAbaixoDe1000
-    ? cursos.filter((curso) => curso.preco < 1000)
-    : cursos;
+  const filtrarPorCategoria = (categoria) => {
+    setCategoriaSelecionada((prev) => (prev === categoria ? null : categoria));
+  };
+
+  const cursosExibidos = cursos
+    .filter((curso) => !filtrarAbaixoDe1000 || curso.preco < 1000)
+    .filter(
+      (curso) =>
+        !categoriaSelecionada || curso.categoria === categoriaSelecionada
+    );
 
   return (
     <StyledConteudo>
@@ -66,6 +74,19 @@ function Conteudo() {
       <button onClick={exemplo2}>
         {filtrarAbaixoDe1000 ? "Esconder" : "Mostrar"} Cursos Abaixo de 1000
       </button>
+
+      <div>
+        <button onClick={() => filtrarPorCategoria("Desenvolvimento")}>
+          Filtrar por Desenvolvimento
+        </button>
+        <button onClick={() => filtrarPorCategoria("Design")}>
+          Filtrar por Design
+        </button>
+        {/* Adicione botões para outras categorias conforme necessário */}
+        <button onClick={() => filtrarPorCategoria(null)}>
+          Limpar Filtro de Categoria
+        </button>
+      </div>
 
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
