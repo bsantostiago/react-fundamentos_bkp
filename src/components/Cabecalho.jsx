@@ -42,7 +42,8 @@ function Cabecalho() {
     // document.querySelector("h1").textContent = "Oie!";
 
     // Abordagem declarativa (usando gerenciamento de estados/states)
-    setTitulo("Oie 😝");
+    // setTitulo("Oie 😝");
+    setTitulo(titulo == "Olá React! 😎" ? "Oie! 😝" : "Olá React! 😎");
   };
 
   return (
