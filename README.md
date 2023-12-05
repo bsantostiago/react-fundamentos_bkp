@@ -1,5 +1,25 @@
 # Fundamentos de React
 
+# 09-states-hooks
+
+State é uma propriedade de um componente que pode ser alterada ao longo do tempo. Por exemplo, um componente que exibe um contador pode ter um state que representa o valor atual do contador.
+
+## React Hooks
+
+Hooks (ou 'ganchos') são funções especiais iniciadas com o prefixo 'use' que permitem gerenciar estados e outras funcionalidades do ciclo de vida de um componente. Os Hooks substituiram o gerenciamento de states através de classes (componentes de classe).
+
+O React possui diversos tipos de hooks, mas os principais são os de gerenciamento de estados (useState) e o de gerenciamento de efeitos colaterais (useEffect), ou seja, ele permite controlar a execução de código (buscar dados, manipular o DOM) quando o componente é montado, atualizado ou desmontado.
+
+### useState
+
+Controla como as informações são armazenadas e gerenciadas em um componente.
+
+### useEffect
+
+Controla efeitos colaterais em componentes. Efeitos colaterais são operações que não estão diretamente relacionadas à renderização do componente, como buscar dados de uma API, manipular o DOM, ou subscrever-se a eventos externos.
+
+---
+
 ## 07-props-com-dados-dinamicos
 
 - Gerando os dados para props a partir de um array com objetos

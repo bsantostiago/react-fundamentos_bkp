@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Menu from "./Menu";
 import styled, { keyframes } from "styled-components";
 
@@ -31,14 +32,22 @@ const StyledCabecalho = styled.header`
 `;
 
 function Cabecalho() {
+  /* Abordagem declarativa (usando gerenciamento de estados/states) 
+  Aqui definimos no hook useState um valor inicial, e desestruturamos
+  o state em uma variável state (titulo) e em uma função responsável por atualizar o state (setTitulo) */
+  const [titulo, setTitulo] = useState("Olá React! 😎");
+
   const exemplo1 = () => {
     // Abordagem imperativa (não usar)
-    document.querySelector("h1").textContent = "Oie!";
+    // document.querySelector("h1").textContent = "Oie!";
+
+    // Abordagem declarativa (usando gerenciamento de estados/states)
+    setTitulo("Oie");
   };
 
   return (
     <StyledCabecalho>
-      <h1 onClick={exemplo1}>Olá React! 😎</h1>
+      <h1 onClick={exemplo1}>{titulo}</h1>
       <hr />
       <Menu />
     </StyledCabecalho>
