@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 /* 2) Em seguida, chamá-la dentro do evento de clique do componente-filho */
-function Artigo({ titulo, categoria, preco, aoClicar }) {
+function Artigo({ titulo, categoria, preco }) {
   const formata = (valor) => {
     return valor.toLocaleString("pt-br", {
       style: "currency",
@@ -10,9 +10,8 @@ function Artigo({ titulo, categoria, preco, aoClicar }) {
   };
 
   return (
-    // <StyledArtigo onClick={aoClicar}>
     <StyledArtigo>
-      <h3 onClick={aoClicar}>Curso: {titulo}</h3>
+      <h3>Curso: {titulo}</h3>
       <h4>Categoria: {categoria}</h4>
       <p>
         <b>Preço: </b>

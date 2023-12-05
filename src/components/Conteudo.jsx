@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Artigo from "./Artigo";
 import cursos from "../api/cursos";
+import { useState } from "react";
 
 const StyledConteudo = styled.main`
   width: 90vw;
@@ -41,19 +42,30 @@ const StyledConteudo = styled.main`
 `;
 
 function Conteudo() {
+  const [filtrarAbaixoDe1000, setFiltrarAbaixoDe1000] = useState(false);
+
   const exemplo2 = () => {
-    alert("Exemplo 2");
+    // setFiltrarAbaixoDe1000((prev) => !prev);
+
+    /* Lógica
+    1) filtrarAbaixoDe1000 inicia false
+    2) Quando clica no botão, o que era false se torna true devido ao !
+    3) E se clicar de novo, o que era true se torna false
+    Portanto, é uma alternância booleana do state */
+    setFiltrarAbaixoDe1000(!filtrarAbaixoDe1000);
   };
 
-  function exemplo3(valor) {
-    alert(`Exemplo 3: ${valor}`);
-  }
+  const cursosExibidos = filtrarAbaixoDe1000
+    ? cursos.filter((curso) => curso.preco < 1000)
+    : cursos;
 
   return (
     <StyledConteudo>
       <h2>Conteúdo da aplicação</h2>
 
-      <button onClick={exemplo2}>Exemplo 2: evento/função</button>
+      <button onClick={exemplo2}>
+        {filtrarAbaixoDe1000 ? "Esconder" : "Mostrar"} Cursos Abaixo de 1000
+      </button>
 
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
@@ -63,10 +75,9 @@ function Conteudo() {
       </p>
 
       <div className="artigos">
-        {cursos.map((curso) => {
+        {cursosExibidos.map((curso) => {
           return (
             <Artigo
-              aoClicar={() => exemplo3(curso.titulo)}
               key={curso.id}
               titulo={curso.titulo}
               categoria={curso.categoria}
