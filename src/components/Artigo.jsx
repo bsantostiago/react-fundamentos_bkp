@@ -10,8 +10,9 @@ function Artigo({ titulo, categoria, preco, handleClick }) {
   };
 
   return (
-    <StyledArtigo onClick={handleClick}>
-      <h3>Curso: {titulo}</h3>
+    // <StyledArtigo onClick={handleClick}>
+    <StyledArtigo>
+      <h3 onClick={handleClick}>Curso: {titulo}</h3>
       <h4>Categoria: {categoria}</h4>
       <p>
         <b>Preço: </b>
