@@ -13,7 +13,7 @@ function Artigo({ titulo, categoria, preco, children }) {
       <h3>Curso: {titulo}</h3>
       <h4>Categoria: {categoria}</h4>
       <p>
-        <b>Preço:</b> {formataPreco(preco || 0)}
+        <b>Preço:</b> {formataPreco(preco)}
       </p>
       {children}
     </StyledArtigo>
