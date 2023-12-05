@@ -66,18 +66,12 @@ function Conteudo() {
         {cursos.map((curso) => {
           return (
             <Artigo
-              // onClick={exemplo3} // não dá
-              /* 1) Passamos a função como uma propriedade para o componente-filho: */
-              // onClick={() => exemplo3(curso.titulo)}
-              // handleClick={() => exemplo3(curso.titulo)}
               aoClicar={() => exemplo3(curso.titulo)}
               key={curso.id}
               titulo={curso.titulo}
               categoria={curso.categoria}
               preco={curso.preco}
-            >
-              <p>coisa e tal....</p>
-            </Artigo>
+            />
           );
         })}
       </div>
