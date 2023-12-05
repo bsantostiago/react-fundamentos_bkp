@@ -31,9 +31,14 @@ const StyledCabecalho = styled.header`
 `;
 
 function Cabecalho() {
+  const exemplo1 = () => {
+    // Abordagem imperativa (não usar)
+    document.querySelector("h1").textContent = "Oie!";
+  };
+
   return (
     <StyledCabecalho>
-      <h1 onClick={() => alert("Exemplo 1")}>Olá React! 😎</h1>
+      <h1 onClick={exemplo1}>Olá React! 😎</h1>
       <hr />
       <Menu />
     </StyledCabecalho>
