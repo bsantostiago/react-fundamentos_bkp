@@ -33,18 +33,24 @@ const StyledConteudo = styled.main`
       margin: 4px;
       width: 48%;
     }
+
+    button {
+      margin: 8px 0;
+    }
   }
 `;
-/* Exercício */
-const responsaveis = ["Neil Peart", "Alex Lifeson", "Geddy Lee"];
 
 function Conteudo() {
-  console.log(cursos);
+  function exemplo2() {
+    alert("Exemplo 2");
+  }
 
   return (
     <StyledConteudo>
       <h2>Conteúdo da aplicação</h2>
-      <hr />
+
+      <button onClick={exemplo2}>Exemplo 2: evento/função</button>
+
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
         labore? Officia quae quo a quas excepturi distinctio sint voluptas
