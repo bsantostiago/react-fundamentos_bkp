@@ -4,6 +4,17 @@
 
 State é uma propriedade de um componente que pode ser alterada ao longo do tempo. Por exemplo, um componente que exibe um contador pode ter um state que representa o valor atual do contador.
 
+Quando algo no seu aplicativo React precisa ser atualizado dinamicamente (como um contador que aumenta a cada clique em um botão), você usa um state para armazenar e gerenciar essa informação. Isso permite que o React reaja às mudanças no state e atualize automaticamente a interface do usuário para refletir essas mudanças.
+
+## Exemplos de mudanças que podem ser gerenciadas por states
+
+- Captura de dados de formulário
+- Visibilidade de componentes
+- Filtros e buscas de dados
+- Contadores (likes por exemplo)
+- Temas/Estilos
+- Pontuação/vida de um jogador
+
 ## React Hooks
 
 Hooks (ou 'ganchos') são funções especiais iniciadas com o prefixo 'use' que permitem gerenciar estados e outras funcionalidades do ciclo de vida de um componente. Os Hooks substituiram o gerenciamento de states através de classes (componentes de classe).
