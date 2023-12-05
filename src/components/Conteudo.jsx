@@ -41,9 +41,9 @@ const StyledConteudo = styled.main`
 `;
 
 function Conteudo() {
-  function exemplo2() {
+  const exemplo2 = () => {
     alert("Exemplo 2");
-  }
+  };
 
   return (
     <StyledConteudo>
