@@ -60,7 +60,9 @@ function Conteudo() {
               titulo={curso.titulo}
               categoria={curso.categoria}
               preco={curso.preco}
-            ></Artigo>
+            >
+              <p>coisa e tal....</p>
+            </Artigo>
           );
         })}
       </div>

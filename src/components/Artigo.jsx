@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-function Artigo({ titulo, categoria, preco }) {
+function Artigo({ titulo, categoria, preco, children }) {
   const formataPreco = (valor) => {
     return valor.toLocaleString("pt-br", {
       style: "currency",
@@ -15,6 +15,7 @@ function Artigo({ titulo, categoria, preco }) {
       <p>
         <b>Preço:</b> {formataPreco(preco || 0)}
       </p>
+      {children}
     </StyledArtigo>
   );
 }
