@@ -7,16 +7,15 @@ function Artigo({ titulo, categoria, preco, children }) {
       currency: "BRL",
     });
   };
-  /* Talvez melhor não usar preço */
+
   return (
     <StyledArtigo>
       <h3>Curso: {titulo}</h3>
       <h4>Categoria: {categoria}</h4>
       <p>
-        <b>Preço:</b>
+        <b>Preço: </b>
         {formata(preco)}
       </p>
-      {children}
     </StyledArtigo>
   );
 }

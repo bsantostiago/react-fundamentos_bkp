@@ -33,7 +33,7 @@ const StyledCabecalho = styled.header`
 function Cabecalho() {
   return (
     <StyledCabecalho>
-      <h1>Olá React! 😎</h1>
+      <h1 onClick={() => alert("Exemplo 1")}>Olá React! 😎</h1>
       <hr />
       <Menu />
     </StyledCabecalho>
