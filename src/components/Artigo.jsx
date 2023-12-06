@@ -7,8 +7,6 @@ const StyledArtigo = styled.article`
   animation-name: surgir;
   animation-duration: 300ms;
   animation-fill-mode: backwards;
-  /* Nem fazer isso na aula */
-  animation-delay: ${(props) => props.delay || "100ms"};
 
   @keyframes surgir {
     from {
@@ -30,16 +28,22 @@ const StyledArtigo = styled.article`
   }
 `;
 
-function Artigo({ titulo, icone, children, responsavel, delay }) {
-  return (
-    <StyledArtigo delay={delay}>
-      <h3>
-        {titulo} {icone}
-      </h3>
-      {children}
+function Artigo({ titulo, categoria, preco }) {
+  const formatarPreco = (valor) => {
+    return valor.toLocaleString("pt-br", {
+      style: "currency",
+      currency: "BRL",
+    });
+  };
 
+  return (
+    <StyledArtigo>
+      <h3>{categoria}</h3>
       <p>
-        <i>Responsável: {responsavel}</i>
+        <b>Curso:</b> {titulo}
+      </p>
+      <p>
+        <b>Preço:</b> {formatarPreco(preco)}
       </p>
     </StyledArtigo>
   );

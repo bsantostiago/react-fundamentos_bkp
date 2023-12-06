@@ -13,6 +13,8 @@ const StyledCabecalho = styled.header`
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
+  position: sticky;
+  top: 0;
 
   hr {
     border: none;

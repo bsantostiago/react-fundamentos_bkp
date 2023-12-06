@@ -1,6 +1,7 @@
+import { useEffect } from "react";
+import cursos from "../api/cursos";
 import styled from "styled-components";
 import Artigo from "../components/Artigo";
-import { useEffect } from "react";
 
 const StyledHome = styled.section`
   @media screen and (min-width: 650px) {
@@ -8,10 +9,11 @@ const StyledHome = styled.section`
       display: flex;
       justify-content: space-between;
       margin-top: 0.5rem;
+      flex-wrap: wrap;
 
       & article {
-        margin: 0;
-        width: 32%;
+        margin: 1%;
+        width: 48%;
       }
     }
   }
@@ -33,30 +35,14 @@ export default function Home() {
       </p>
 
       <div className="artigos">
-        <Artigo titulo="Front-End" icone="💻">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor,
-            omnis!
-          </p>
-          <ul>
-            <li>HTML5</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-          </ul>
-        </Artigo>
-        <Artigo titulo="Back-End" icone="🔐">
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Consequatur possimus reprehenderit iure error debitis hic eos amet
-            aspernatur nostrum odio maxime, quo delectus suscipit corrupti
-            dolore exercitationem iusto quis laudantium!
-          </p>
-        </Artigo>
-        <Artigo titulo="Mobile" icone="📱">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </Artigo>
+        {cursos.map((curso) => (
+          <Artigo
+            key={curso.id}
+            titulo={curso.titulo}
+            categoria={curso.categoria}
+            preco={curso.preco}
+          />
+        ))}
       </div>
     </StyledHome>
   );
