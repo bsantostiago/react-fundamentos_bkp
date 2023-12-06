@@ -1,10 +1,9 @@
-import { useEffect } from "react";
 import styled from "styled-components";
 
 export default function Contato() {
-  useEffect(() => {
+  /* useEffect(() => {
     document.title = "Contato";
-  }, []);
+  }, []); */
   return (
     <StyledContato>
       <h2>Página Contato</h2>

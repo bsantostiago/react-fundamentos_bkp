@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import cursos from "../api/cursos";
 import styled from "styled-components";
 import Artigo from "../components/Artigo";
@@ -20,10 +19,6 @@ const StyledHome = styled.section`
 `;
 
 export default function Home() {
-  useEffect(() => {
-    document.title = "Página Inicial";
-  }, []);
-
   return (
     <StyledHome>
       <h2>Página inicial</h2>
