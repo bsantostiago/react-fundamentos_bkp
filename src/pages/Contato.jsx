@@ -1,9 +1,19 @@
+import { useEffect } from "react";
 import styled from "styled-components";
 
 export default function Contato() {
+  useEffect(() => {
+    document.title = "Contato";
+  }, []);
   return (
-    <section>
+    <StyledContato>
       <h2>Página Contato</h2>
-    </section>
+    </StyledContato>
   );
 }
+
+const StyledContato = styled.section`
+  h2 {
+    color: orange;
+  }
+`;

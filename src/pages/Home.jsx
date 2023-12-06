@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Artigo from "../components/Artigo";
+import { useEffect } from "react";
 
 const StyledHome = styled.section`
   @media screen and (min-width: 650px) {
@@ -17,6 +18,10 @@ const StyledHome = styled.section`
 `;
 
 export default function Home() {
+  useEffect(() => {
+    document.title = "Página Inicial";
+  }, []);
+
   return (
     <StyledHome>
       <h2>Página inicial</h2>

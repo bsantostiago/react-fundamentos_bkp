@@ -9,6 +9,7 @@ const StyledContainer = styled.main`
 
   p {
     line-height: 1;
+    margin: 0.5rem 0;
   }
 `;
 
