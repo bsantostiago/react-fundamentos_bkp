@@ -57,7 +57,10 @@ function Conteudo() {
   };
 
   const filtrarPorCategoria = (categoria) => {
-    setCategoriaSelecionada((prev) => (prev === categoria ? null : categoria));
+    // setCategoriaSelecionada((prev) => (prev === categoria ? null : categoria));
+    setCategoriaSelecionada((categoriaAtual) =>
+      categoriaAtual === categoria ? null : categoria
+    );
   };
 
   const cursosExibidos = cursos
@@ -76,6 +79,9 @@ function Conteudo() {
       </button>
 
       <div>
+        <button onClick={() => filtrarPorCategoria("Front-End")}>
+          Filtrar por Front-End
+        </button>
         <button onClick={() => filtrarPorCategoria("Desenvolvimento")}>
           Filtrar por Desenvolvimento
         </button>

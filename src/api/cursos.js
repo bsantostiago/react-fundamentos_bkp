@@ -6,6 +6,7 @@ const cursos = [
   { id: 5, titulo: "PHP e MySQL", categoria: "Back-End", preco: 600 },
   { id: 6, titulo: "Flutter", categoria: "Mobile", preco: 900 },
   { id: 7, titulo: "Figma", categoria: "Design", preco: 100 },
+  { id: 8, titulo: "jQuery", categoria: "Front-End", preco: 1200 },
 ];
 
 /* Talvez melhor não usar preço */
