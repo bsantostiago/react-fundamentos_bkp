@@ -1,3 +1,4 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Cabecalho from "./components/Cabecalho";
 import Container from "./components/Container";
 import Rodape from "./components/Rodape";
@@ -8,13 +9,17 @@ import Produtos from "./pages/Produtos";
 function App() {
   return (
     <>
-      <Cabecalho />
-      <Container>
-        <Home />
-        <Produtos />
-        <Contato />
-      </Container>
-      <Rodape />
+      <BrowserRouter>
+        <Cabecalho />
+        <Container>
+          <Routes>
+            <Route Component={Home} exact path="/" />
+            <Route Component={Produtos} path="/produtos" />
+            <Route Component={Contato} path="/contato" />
+          </Routes>
+        </Container>
+        <Rodape />
+      </BrowserRouter>
     </>
   );
 }

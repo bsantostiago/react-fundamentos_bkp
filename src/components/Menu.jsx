@@ -3,9 +3,9 @@ import { StyledMenu } from "../styles/styles.js";
 function Menu() {
   return (
     <StyledMenu>
-      <a href="">Home</a>
-      <a href="">Produtos</a>
-      <a href="">Contato</a>
+      <a href="/">Home</a>
+      <a href="/produtos">Produtos</a>
+      <a href="/contato">Contato</a>
     </StyledMenu>
   );
 }
