@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-/* 2) Em seguida, chamá-la dentro do evento de clique do componente-filho */
 function Artigo({ titulo, categoria, preco }) {
   const formata = (valor) => {
     return valor.toLocaleString("pt-br", {

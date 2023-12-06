@@ -3,44 +3,6 @@ import Artigo from "./Artigo";
 import cursos from "../api/cursos";
 import { useState } from "react";
 
-const StyledConteudo = styled.main`
-  width: 90vw;
-  max-width: 800px;
-  margin: 1rem auto;
-  background-color: aliceblue;
-  padding: 1rem;
-  box-shadow: darkblue 0 0 1px inset;
-
-  hr {
-    border: none;
-    border-bottom: outset 1px;
-    margin-bottom: 0.5rem;
-  }
-
-  p {
-    line-height: 1;
-  }
-
-  @media screen and (min-width: 650px) {
-    .artigos {
-      display: flex;
-      justify-content: flex-start;
-      align-items: stretch;
-      margin-top: 0.5rem;
-      flex-wrap: wrap;
-    }
-
-    .artigos article {
-      margin: 4px;
-      width: 48%;
-    }
-
-    button {
-      margin: 8px 0;
-    }
-  }
-`;
-
 function Conteudo() {
   const [filtrarAbaixoDe1000, setFiltrarAbaixoDe1000] = useState(false);
   const [categoriaSelecionada, setCategoriaSelecionada] = useState(null);
@@ -94,13 +56,6 @@ function Conteudo() {
         </button>
       </div>
 
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
-        labore? Officia quae quo a quas excepturi distinctio sint voluptas
-        labore iste veniam possimus facere adipisci sit repellat, voluptate,
-        expedita aspernatur.
-      </p>
-
       <div className="artigos">
         {cursosExibidos.map((curso) => {
           return (
@@ -116,5 +71,43 @@ function Conteudo() {
     </StyledConteudo>
   );
 }
+
+const StyledConteudo = styled.main`
+  width: 90vw;
+  max-width: 800px;
+  margin: 1rem auto;
+  background-color: aliceblue;
+  padding: 1rem;
+  box-shadow: darkblue 0 0 1px inset;
+
+  hr {
+    border: none;
+    border-bottom: outset 1px;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    line-height: 1;
+  }
+
+  @media screen and (min-width: 650px) {
+    .artigos {
+      display: flex;
+      justify-content: flex-start;
+      align-items: stretch;
+      margin-top: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .artigos article {
+      margin: 4px;
+      width: 48%;
+    }
+
+    button {
+      margin: 8px 0;
+    }
+  }
+`;
 
 export default Conteudo;
