@@ -1,9 +1,19 @@
 import Menu from "./Menu";
 import styled, { keyframes } from "styled-components";
 
+function Cabecalho() {
+  return (
+    <StyledCabecalho>
+      <h1 onClick={() => alert("Exemplo 1")}>Olá React! 😎</h1>
+      <hr />
+      <Menu />
+    </StyledCabecalho>
+  );
+}
+
 const efeito = keyframes`
-  from { opacity: 0.4; }
-  to { opacity: 1; }
+    from { opacity: 0.4; }
+    to { opacity: 1; }
 `;
 
 const StyledCabecalho = styled.header`
@@ -29,15 +39,4 @@ const StyledCabecalho = styled.header`
     animation-direction: alternate-reverse;
   }
 `;
-
-function Cabecalho() {
-  return (
-    <StyledCabecalho>
-      <h1 onClick={() => alert("Exemplo 1")}>Olá React! 😎</h1>
-      <hr />
-      <Menu />
-    </StyledCabecalho>
-  );
-}
-
 export default Cabecalho;

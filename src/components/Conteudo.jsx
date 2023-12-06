@@ -45,6 +45,7 @@ function Conteudo() {
     alert("Exemplo 2");
   };
 
+  /* Também usado do filho pro pai */
   function exemplo3(valor) {
     alert(`Exemplo 3: ${valor}`);
   }
@@ -55,20 +56,13 @@ function Conteudo() {
 
       <button onClick={exemplo2}>Exemplo 2: evento/função</button>
 
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
-        labore? Officia quae quo a quas excepturi distinctio sint voluptas
-        labore iste veniam possimus facere adipisci sit repellat, voluptate,
-        expedita aspernatur.
-      </p>
-
       <div className="artigos">
         {cursos.map((curso) => {
           return (
             <Artigo
               // onClick={exemplo3} // não dá
               /* 1) Passamos a função como uma propriedade para o componente-filho: */
-              // onClick={() => exemplo3(curso.titulo)}
+              // onClick={() => exemplo3(curso.titulo)} // não dá
               // handleClick={() => exemplo3(curso.titulo)}
               aoClicar={() => exemplo3(curso.titulo)}
               key={curso.id}
