@@ -14,7 +14,7 @@ function Conteudo() {
 
   return (
     <StyledConteudo>
-      <h2>Conteúdo da aplicação</h2>
+      <h2 onClick={() => exemplo3("pai")}>Conteúdo da aplicação</h2>
       <button onClick={exemplo2}>Exemplo 2: evento/função</button>
       <div className="artigos">
         {cursos.map((curso) => {
